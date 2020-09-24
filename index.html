@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Drum Machine</title>
+  <link href="style.css" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body>
+
+<nav>
+  <h1 class="text-center">Drum & Bass Machine</h1>
+</nav>
+
+
+<div class="container middle">
+<div class="container" id="drum-machine">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="container-fluid mid-stuff">
+
+
+
+          <!-- <div class="row">
+            <h1>Adas</h1>
+          </div> -->
+
+
+
+            <div class="row">
+              <div class="col-md-12" id="display">
+                <p>Volume: <span id="demo"></span></p>
+              </div>
+            </div>
+
+            <div class="row">
+
+              <div class="col-md-4">
+                <h4>Power</h4>
+                <label class="switch">
+                  <input type="checkbox" onclick="mutePage()">
+                  <span class="slider""></span>
+                </label>
+              </div>
+
+              <div class="col volume-bar">
+                <h4>Volume</h4>
+                <input type="range"
+                       onchange="updateVolume()"
+                       min="1"
+                       max="100"
+                       value="50"
+                       step=1
+                       class="slidere"
+                       id="myRange"
+                >
+              </div>
+            </div>
+            <!-- <div class="row">
+              <h2>Help</h2>
+            </div> -->
+      </div>
+    </div>
+
+
+
+
+  <div class="col-md-6">
+    <div class="container-fluid padding">
+
+      <div class="row padding">
+        <button class="col-md-3 drum-pad" id="drum-1" onClick="play('Q')">
+          Q
+          <audio src="./music/bass1.wav" class="clip" id="Q">
+
+          </audio>
+        </button>
+        <button class="col-md-3 drum-pad" id="drum-2" onClick="play('W')">
+          W
+          <audio src="./music/bass2.wav" class="clip" id="W">
+
+          </audio>
+        </button>
+        <button class="col-md-3 drum-pad" id="drum-3" onClick="play('E')">
+          E
+          <audio src="./music/bass3.wav" class="clip" id="E">
+
+          </audio>
+        </button>
+        <button class="col-md-3 drum-pad" id="drum-4" onClick="play('R')">
+          R
+          <audio src="./music/bass4.wav" class="clip" id="R">
+
+          </audio>
+        </button>
+      </div>
+
+      <div class="row padding">
+        <button class="col-md-3 drum-pad" id="drum-5" onClick="play('A')">
+          A
+          <audio src="./music/bass5.wav" class="clip" id="A">
+
+          </audio>
+        </button>
+        <button class="col-md-3 drum-pad" id="drum-6" onClick="play('S')">
+          S
+          <audio src="./music/bass6.wav" class="clip" id="S">
+
+          </audio>
+        </button>
+        <button class="col-md-3 drum-pad" id="drum-7" onClick="play('D')">
+          D
+          <audio src="./music/drum7.wav" class="clip" id="D">
+
+          </audio>
+        </button>
+        <button class="col-md-3 drum-pad" id="drum-8" onClick="play('F')">
+          F
+          <audio src="./music/drum8.wav" class="clip" id="F">
+
+          </audio>
+        </button>
+      </div>
+
+      <div class="row padding">
+
+        <button class="col-md-3 drum-pad" id="drum-9" onClick="play('Z')">
+          Z
+          <audio src="./music/drum9.wav" class="clip" id="Z">
+
+          </audio>
+        </button>
+        <button class="col-md-3 drum-pad" id="drum-10" onClick="play('X')">
+          X
+          <audio src="./music/drum10.wav" class="clip" id="X">
+
+          </audio>
+        </button>
+        <button class="col-md-3 drum-pad" id="drum-11" onClick="play('C')">
+          C
+          <audio src="./music/fem11.wav" class="clip" id="C">
+
+          </audio>
+        </button>
+        <button class="col-md-3 drum-pad" id="drum-12" onClick="play('V')">
+          V
+          <audio src="./music/fem12.wav" class="clip" id="V">
+
+          </audio>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+      </div>
+    </div>
+
+</div>
+
+<footer>
+  <p>by Mocanu Sebastian</p>
+</footer>
+<script src="volume.js" ></script>
+<script src="power.js"></script>
+<script src="./app.js"></script>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<!-- <script src="hnttps://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
+</body>
+</html>

@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+@import 'https://fonts.googleapis.com/css?family=Share+Tech+Mono';
+@font-face {
+  font-family: "Digital";
+  src: url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.eot");
+  src: url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.woff") format("woff"), url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.svg#Digital-7") format("svg");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  color: #222;
+  scroll-behavior: smooth;
+}
+body {
+
+  background-color: #ADD8E6 !important;
+  color: #222 !important;
+  font-weight: 300;
+}
+
+nav {
+  background-color: #222;
+  color: #F8F8F8;
+  padding: 10px;
+  /* width: 100%; */
+
+}
+.middle {
+  padding-top: 300px;
+  padding-bottom: 300px;
+}
+.mid-stuff{
+  padding-top: 30px;
+}
+#drum-machine {
+  /* height: 550px; */
+  width: 700px;
+  padding: 20px;
+  color: #222;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  /* display: flex; */
+  font-family: "Poppins", sans-serif;
+  border: 5px solid #385151;
+  position: relative;
+  background-color: #4682B4;
+  border-radius: 10px;
+
+}
+.drum-pad {
+  position: relative;
+  float: right;
+  width: 100px;
+  height: 75px;
+  margin-left: auto;
+  border-radius: 10px;
+  padding-bottom: 10px;
+  box-sizing: border-box;
+  background-color: #B0C4DE;
+}
+#display {
+  height: 50px;
+  background-color: #B0C4DE;
+  margin: 15px auto;
+  padding: 15px;
+  box-sizing: border-box;
+  border-radius: 50px;
+  color: #222;
+  font-weight: bolder;
+  font-family: "Digital";
+  letter-spacing: 3px;
+}
+
+
+
+footer{
+  background: #222;
+  color: #F8F8F8;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  padding: 10px;
+  padding-bottom: 0;
+  width: 100%;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #222;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #008B8B;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #222;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #222;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slidecontainer {
+  width: 50%; /* Width of the outside container */
+}
+
+/* The slider itself */
+.slidere {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  width: 100%; /* Full-width */
+  height: 10px; /* Specified height */
+  background: #222;
+  border: 2px solid #000;
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+  position: relative;
+}
+
+/* Mouse-over effects */
+.slidere:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slidere::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 13px; /* Set a specific slider handle width */
+  height: 40px; /* Slider handle height */
+  border: 3px solid #000;
+  background: #008B8B; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.slidere::-moz-range-thumb {
+  width: 10px; /* Set a specific slider handle width */
+  height: 10px; /* Slider handle height */
+  background: #008B8B; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+.lefty {
+  padding: 10px;
+  width: 200px;
+  display: inline-block;
+  border: 5px solid pink;
+
+}
+.volume-bar {
+  /* padding-top: 30px; */
+  height:10px;
+ width:50%;
+    position:relative;
+}
+.righty {
+  display: inline-block;
+}

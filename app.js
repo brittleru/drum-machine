@@ -1,0 +1,103 @@
+let slider = document.getElementById("myRange");
+let output = document.getElementById("demo");
+output.innerHTML = slider.value; // Display the default slider value
+
+// Update the current slider value (each time you drag the slider handle)
+slider.oninput = function() {
+  output.innerHTML = this.value;
+}
+
+
+function play(str) {
+  console.log(str, " <= String Passed!");
+
+
+
+  if(str === "q" || str === "Q") {
+    document.getElementById("display").innerHTML = "HARD BASS 1";
+  }
+  else if (str === "w" || str === "W") {
+    document.getElementById("display").innerHTML = "HARD BASS 2";
+  }
+  else if (str === "e" || str === "E") {
+    document.getElementById("display").innerHTML = "HARD BASS 3 ";
+  }
+  else if (str === "r" || str === "R") {
+    document.getElementById("display").innerHTML = "HARD BASS 4";
+  }
+  else if (str === "a" || str === "A") {
+    document.getElementById("display").innerHTML = "HARD BASS 5";
+  }
+  else if (str === "s" || str === "S") {
+    document.getElementById("display").innerHTML = "HARD BASS 6";
+  }
+  else if (str === "d" || str === "D") {
+    document.getElementById("display").innerHTML = "DRUM 'N' BASS 1";
+  }
+  else if (str === "f" || str === "F") {
+    document.getElementById("display").innerHTML = "DRUM 'N' BASS 2";
+  }
+  else if (str === "z" || str === "Z") {
+    document.getElementById("display").innerHTML = "DRUM 'N' BASS 3";
+  }
+  else if (str === "x" || str === "X") {
+    document.getElementById("display").innerHTML = "DRUM 'N' BASS 4";
+  }
+  else if (str === "c" || str === "C") {
+    document.getElementById("display").innerHTML = "LAUGH";
+  }
+  else if (str === "v" || str === "V") {
+    document.getElementById("display").innerHTML = "Transfer complete!";
+  }
+
+
+  let audio = document.getElementById(str);
+
+
+  audio.play();
+}
+
+window.document.onkeyup = function(event) {
+  let keystroke = event.key;
+  if(keystroke === "q" || keystroke === "Q") {
+    play("Q")
+  }
+  else if (keystroke === "w" || keystroke === "W") {
+    play("W");
+  }
+  else if (keystroke === "e" || keystroke === "E") {
+    play("E");
+  }
+  else if (keystroke === "r" || keystroke === "R") {
+    play("R");
+  }
+  else if (keystroke === "a" || keystroke === "A") {
+    play("A");
+  }
+  else if (keystroke === "s" || keystroke === "S") {
+    play("S");
+  }
+  else if (keystroke === "d" || keystroke === "D") {
+    play("D");
+  }
+  else if (keystroke === "f" || keystroke === "F") {
+    play("F");
+  }
+  else if (keystroke === "z" || keystroke === "Z") {
+    play("Z");
+  }
+  else if (keystroke === "x" || keystroke === "X") {
+    play("X");
+  }
+  else if (keystroke === "c" || keystroke === "C") {
+    play("C");
+  }
+  else if (keystroke === "v" || keystroke === "V") {
+    play("V");
+  }
+
+}
+// function setVolume() {
+//   let mediaClip = document.getElementById('Q');
+//   mediaClip.volume = document.getElementById("myRange").value;
+// }
